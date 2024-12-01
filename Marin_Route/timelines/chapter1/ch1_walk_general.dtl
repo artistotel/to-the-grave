@@ -1,0 +1,24 @@
+[background arg="res://Marin_Route/black2.png" fade="2.0"]
+So, home. You make your way through the known streets.
+[background arg="res://Marin_Route/animations/orphanage.png" fade="2.0"]
+To your left is the orphanage. It's been renovated two years ago.\
+Your friend projected it.\
+Istok.\
+And he was only the first year of architecture, too... talent nobody had ever seen before.\
+Would he recognize you now, though, dear Alumnus?\
+He mostly looks at the bottom of the glass these days.\
+Oh well. Artists. They all end up drinking.\
+The last you've heard is that he dropped out for good, returned home.\
+His building should be somewhere close...\
+Want to go say hi?
+[background arg="res://Marin_Route/black2.png" fade="2.0"]
+- ...No, not really
+	Maybe you're right. You shouldn't pick at the old wounds.\
+After all, the last time you saw each other...\
+Did not go that great, did it.\
+You didn’t stop being friends; you just started pretending you never were.\
+You should go home.
+	jump ch1_murder/
+- ...Maybe
+	Well, let's go then. It's not that far away.
+	jump ch1_istok_home/

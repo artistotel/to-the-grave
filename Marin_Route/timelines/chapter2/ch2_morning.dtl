@@ -1,0 +1,156 @@
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+You look at the clock. 7am.\
+Don't think too much about that dream, Alumnus. Dreams don't really mean anything.\
+Dreams are like fortune cookies—fun to crack open, but mostly nonsense.\
+You get up.\
+Today's a big day. They will announce the murder that's taken place.
+if {inventoryitems.knife} == true:
+	And you still keep the main piece of evidence.\
+Quit it. If your hands shake, it will just make you seem more suspicious.
+else:
+	Leaving that knife there was smart.
+[background scene="res://Marin_Route/animations/chapter 2/tv.tscn" fade="3.0"]
+You enter the kitchen.\
+The TV is on.\
+Here comes the big surprise.
+renata_klakochar: The body of mayor Ivanich was found between the park and the bridge today at early hours of the morning.\
+Question remains\: who could've done such a horrible thing?\
+We are here with Ersad Dibrich. Ersad, could it be politically motivated?
+ersad_dibrich: Thank you, Renata. Yes, so far that seems as the most likely reason...\
+The elections are less than two months away, after all. But we cannot outrule other motives either...
+You look at your parents, glued to the screen.\
+Your mother looks awfully shaken. Like her own kin was murdered. Like Ela died.\
+Your father scoffs.
+bepo_knezevich: Good riddance to him, I say. Fucking cunt.
+marija_knezevich: How can you say that?! Have you lost it?!\
+Who's going to pay for Ela's treatment now?!!!
+Wait.\
+Pay for Ela's treatment?
+marinknezevich (shocked): What do you mean pay for Ela's treatment?
+Your father laughs.
+if {walkhome} == "longbarvisit":
+	bepo_knezevich: Of course you don't know. No, you're out, sneaking around bars, couldn't even come to visit her last night.
+bepo_knezevich: Did you really think the pitiful money you send home pays for all the medication she needs?
+marija_knezevich: I... Marin... We didn't want to tell you...\
+Matej has been the one funding her treatment for the last year. Ever since her illness worsened.
+bepo_knezevich: But no, with the future doctor here, we don't need his charity anymore, do we?
+marinknezevich (angry): Now hang on...
+[sound volume="0.0"]
+marinknezevich (shocked): Who's that?
+anja_ivanich: Open up. It's Anja.
+Matej's daughter.\
+She also works for the police.
+if {inventoryitems.knife} == true:
+	And you still have that knife.
+	- Hide it!
+		But where? You look a bit around.\
+Ela's room is the safest option.
+		- I can't...
+			We will figure something else out later. We are out of time now.
+		- They won't look there...
+			Awful, awful.
+			set {knifeelasroom} = true
+			set {guilt} += 1
+			[signal arg="guilt_increased"]
+			You'd do that to your sister? Well, nevermind, you just lightly open the door, and while nobody is looking, throw the knife behind the closet...\
+She seems to be asleep.
+	- No time!
+		set {knifewithyou} = true
+marija_knezevich: Coming!
+She lets Anja in.\
+Her face is like made of stone. If there were any tears, they seem to have dried long time ago.\
+Your mother still pulls her into a hug.\
+She's a kind woman like that.
+marija_knezevich: Oh, Anja, I'm so sorry about your father... We've just heard it on the news...
+anja_ivanich (ugh): ...\
+Thank you, ma'am Knezevich. I'm here by duty, though. Mind if I ask you a few questions?\
+...
+anja_ivanich (def): ...?\
+Marin? You're here? When did you come?
+if {walkhome} == "longbarvisit":
+	bepo_knezevich: This morning, around 4am. He had to make a stop at the bar, you see.
+else:
+	marija_knezevich: Last night... he's been here the entire night, just ask Ela...
+Anja takes a few notes. You awkwardly smile.
+anja_ivanich: The murder took place, according to our forensics, last night around 9pm... When exactly did you come home?
+- ...Before
+	anja_ivanich: By the train? I thought it was running late. As trains here usually do...\
+Hm.
+	marinknezevich (laugh): Right... my fault... must've been later then.
+- ...After
+anja_ivanich (ugh): Alright. From the train station to here you had to go over... either the park or the bridge.\
+Did you see anything suspicious?
+- I took the longer route, over the factory.
+	set {lies} = "factory"
+	set {lie} += 1
+	She notes that down.
+	anja_ivanich: So, you didn't see anything... alright. If you remember anything, give me a call.
+- I didn't see anything.
+	anja_ivanich (def): Are you sure?
+	- I'm sure.
+		anja_ivanich: Alright, well... if you remember anything, give me a call, fine?
+	- Actually...
+		Be careful, Alumnus. Don't you remember our little rule?\
+Do you really want this game to end so soon?
+		- I've seen nothing.
+			anja_ivanich: Alright, well... if you remember anything, give me a call, fine?
+		- I've seen something.
+			...It's not very nice to agree to play a game and then disrespect its rules.\
+But, well. Your choice is yours only.\
+You relay upon Anja everything you've seen that night.\
+The girl, the knife, the puddle of blood... you know who's murdered her father.\
+Tch tch tch. Tattletale.
+			jump demo_end/
+anja_ivanich: Alright, well... I need to get going...
+marija_knezevich: Do you want to stay for a drink...? This must be so hard for you, Anja...
+anja_ivanich (ugh): I'm fine. Seriously.\
+Glad to see you, Marin.
+marinknezevich (default): It was nice to see you too.
+anja_ivanich (def): The funeral is tomorrow. I know... that he'd like if you were there. All of you.
+Well, except your father. You can see it in her eyes.
+marija_knezevich: We'll be there. Won't we, Marin?
+- Um...
+- Sure...
+marija_knezevich: We'll see you. Anja, take time off... don't... overwork yourself.
+anja_ivanich: I'll be calmer looking for the murderer than sitting at home, I assure you, ma'am Knezevich.\
+Marin... call me up for a drink, when you're free.
+That woman is like made of a stone.\
+Regardless, she leaves...
+if {inventoryitems.knife} == true:
+	You're safe for now. That knife...
+	if {knifeelasroom} == true:
+		And to think you've hid it in Ela's room...
+else:
+	You're safe for now.\
+Hey, do you wonder what would've happened if you had taken that knife with you?\
+There's another Marin Knezevich, in different timeline... and he probably isn't having that much of a good time now.
+ela_knezevich (shocked): Who was that?
+marija_knezevich: Oh, love...
+She relays the news of the murder upon her. Ela seems weaker and weaker with every word.
+ela_knezevich (pensive): But... who could do such a thing?! I mean... he was a nice man, a kind man, he always gave to the poor...\
+He's the one who single-handedly funded the orphanage renovations!
+Really... who could've?\
+Oh, you know that answer already. The question is... why?\
+And why are you protecting that girl?\
+Oh, haha. You know the answer to that too.\
+Because it's the rule.\
+Or maybe... you've already broken it, behind my back.\
+In that case you know what happens.\
+Still, it still doesn't answer that big looming 'why'.
+if {walkhome} == "longbarvisit":
+	ela_knezevich (shocked): Marin? When did you get here?
+	Oh. Right. You haven't seen her yet.
+	marinknezevich (facepalm): Pretty late...
+	bepo_knezevich: Or early. As you take it...
+	ela_knezevich (default): I'm glad to see you.
+	She stayed up the entire night waiting for you. Until sleep took over her.\
+And to think how you used to stand at her door, listening to her breathe... making sure she didn't stop.\
+But last night, the bar was more attractive option.\
+I won't blame you. You did witness a murder, after all.
+marinknezevich (default): I need to take a walk. But I'll be back later, okay?
+ela_knezevich (pensive): But...
+marinknezevich (laugh): It will all be fine.
+Enough with the lies.\
+Let's go take that walk.\
+And maybe chat a bit.\
+Just you and me, Alumnus.

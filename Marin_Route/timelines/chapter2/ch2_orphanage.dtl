@@ -1,0 +1,39 @@
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+You are once again left on your own. The streets seem almost alive, the way they breathe... Sigh, mostly, weeping over the citiziens of this town. And you are one of them too.\
+Is there any other place a lost man can go except home?\
+And you should probably put on something else for the funeral... something nicer.\
+You need to show yourself in good light. After all, Ivanich did pay for your studies.\
+...\
+And Ela's treatment.\
+And you're here, protecting his murderer.\
+Yes, yes, I know. According to my instructions. But it's important.\
+I don't know if you've cheated. Or what you're doing with all those save slots.\
+But every choice has a consequence. Maybe not now... but... there is a saying in my language.\
+"The Earth swore to Heaven that all secrets will be revealed".\
+Hopefully not the one you're carrying with yourself.
+[background arg="res://Marin_Route/animations/orphanage.png" fade="3.0"]
+Look. That infamous orphanage is to your left.\
+Let's see what we can find there.\
+The police seem to be mingling around, but they're not paying any mind to you.
+Wait. Is that...?\
+In the corner you spot the girl from the last night!\
+She's standing there, smoking, like nothing ever happened...
+- After her!
+	marinknezevich (angry): Hey! You!
+	tonka: ?!
+- Stay low.
+	tonka: ...\
+...\
+...!
+	She's noticed you!
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+She takes off running. You run after her. Seems like she recognizes you.\
+You could alert the police...\
+But I won't let you.\
+Instead, you circle around the orphanage, all the way to the east side... where...\
+She's disappeared.\
+Look down.\
+Like a God from Heavens, look down, under your feet, Alumnus.\
+You're standing on it.
+# demo
+jump demo_end/

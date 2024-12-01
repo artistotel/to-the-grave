@@ -1,0 +1,21 @@
+- Djermano Radunica
+	set {friend} = "djermano"
+	Ah, your good old friend, Djermano Radunica... a very...
+	ela_knezevich (shocked): You still hang out with him?! Marin! What did I tell you!
+	ela_knezevich (pensive): You know that he is... a political agitator... he is a communist!\
+I don't want to see you arrested or worse...
+	marinknezevich (smile): Don't worry. I'm keeping myself safe, I promise.
+	Poor Djermano. Always a believer in the better world.\
+He would probably cheer for Ivanich's death.
+- Laura Stojnich
+	set {friend} = "laura"
+	Ah, Laura. A beast. A dragon with seven heads...\
+She's the same year as you, different class. Microbiology, as opposed to general medicine.
+	marinknezevich (smile): Laura's just had her article printed in the medical magazine.\
+She's aiming for heights...
+	ela_knezevich: Oh, I'm glad for her. But wasn't she supposed to marry soon too?
+	marinknezevich: Yeah. I think she's marrying for money though, not love.\
+The guy's in for a rude awakening.
+	ela_knezevich (pensive): Aren't her parents like, filthy rich?
+	marinknezevich: They are. Filthy, filthy. But she never let it get to her head.
+jump ch1_family/friends_done

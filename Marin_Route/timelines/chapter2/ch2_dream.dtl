@@ -1,0 +1,23 @@
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+That night, you dream.
+[background scene="res://Marin_Route/animations/chapter 2/boar2.tscn" fade="5.0"]
+You are a bear. Running through the woods. \
+Running from what?\
+I don't know. Something. People often run in dreams. And it's always from something.\
+...Never towards something.\
+You can feel your claws dig into the soft soil beneath them...
+Until you stop in front of the body of a large boar.\
+It's intestines are everywhere. And on top of it is a little finch.
+It spots you.\
+And flies away.\
+Follow it?
+- What else is there to do?
+You're right. You see, in reality you might have choices, but in dreams... well. They're made for you.
+You start following the finch which leads you to a tree.\
+It hurries into the hole, in the trunk. When you rise to check it out better, you see a bunch of other little finches inside...
+Around your feet you feel something. \
+A ferret. Turning in circles.\
+It seems to be desperate, motioning for you to follow... its cries are almost human-like.
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+You wake up, covered in sweat.
+jump ch2_morning/

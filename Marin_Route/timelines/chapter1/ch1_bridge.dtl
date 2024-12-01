@@ -1,0 +1,17 @@
+Ah, the bridge. Over the river.\
+Hey, keep your chin up, we can finally visit the real diva of this town -\
+- the stoplight.\
+You make your way over to it.\
+Look!
+set {walkhome} = "bridge"
+[background scene="res://Marin_Route/animations/chapter 1/traf.tscn" fade="2.0"]
+There's a poster on it! You recognize the band.\
+"Still Here"\
+Hahahahahaha. Oh. They must think they're so funny.\
+Seems they have a new single...\
+"The Stoplight Blues"\
+Oh ha ha ha, isn't that hilarious.\
+You know those two guys, actually. Borna and Filip.\
+You went to school together.\
+Let's get moving. The walk to home is still long.
+jump ch1_walk_general/

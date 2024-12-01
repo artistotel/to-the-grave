@@ -1,0 +1,38 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.9375, 0.557699, 0.113525, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "customtest"
+},
+"default_portrait": "def",
+"description": "",
+"display_name": "Anja Ivanich",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"def": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/random/anja_def.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"ugh": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/random/anja_ugh.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

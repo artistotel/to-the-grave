@@ -1,0 +1,56 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.796875, 0.702713, 0.420227, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "customtest"
+},
+"default_portrait": "default",
+"description": "",
+"display_name": "Ela Knezevich",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"default": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/ela_knezevich/ela_default.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"pensive": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/ela_knezevich/ela_pensive.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"shocked": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/ela_knezevich/ela_shocked.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"smile": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/ela_knezevich/ela_happy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

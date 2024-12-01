@@ -1,0 +1,49 @@
+- Siraj Awad
+	set {friend} = "siraj"
+	Ah, your good friend Siraj. A foreign exchange student.\
+Top of his class. He's almost graduated. He delivered well upon his promise that he would finish his studies early and go back home to help.\
+War is a tragedy. But it's not really war, what's happening in his country.
+	set {despair} += 1
+	[signal arg="despair_increased"]
+	It's full on slaughter.\
+See? There are fates far worse than yours, dear Alumnus.
+	marinknezevich (default): Siraj is defending his diploma next Sunday.\
+Then he's going back home.
+	ela_knezevich: Back home? But... there's barely any home for him to return to...
+	marinknezevich (facepalm): I know. Don't... don't remind me. Not a kind man like him.
+	marinknezevich (laugh): But he promised he'd write. We can just hope for the best, no?
+	ela_knezevich (pensive): I don't know... the things aren't good.
+	marinknezevich (default): I thought mother and father controlled what you watch?
+	ela_knezevich: They do... but, well, Istok sometimes brings me newspapers.
+	[background arg="res://Marin_Route/black2.png" fade="2.0"]
+	marinknezevich (shocked): Huh?
+	ela_knezevich (default): He's not a bad man. He's dealing with something, but I'm certain he will get through it.\
+I always fancied him, you know...
+	marinknezevich: Maybe you should...
+	- Stay away from him
+		ela_knezevich (default): I know things aren't good between you two... but he visits.\
+Not many people do.
+		if {walkhome} == "istok":
+			You're surprised by these news.\
+...To say the least. Considering the state of his apartment.
+	- Send him my greetings next time
+		set {likingistok} += 1
+		set {guilt} -= 1
+		[signal arg="guilt_decreased"]
+		Isn't that nice? That he's taking care of your sister.
+		ela_knezevich (smile): I will! He usually comes on Thursdays.
+		ela_knezevich (pensive): Not really while you're here, though...
+- Magdalena Hauser
+	set {friend} = "magdalena"
+	Your good friend Magdalena.\
+She plays the cello. For now, she plays at the bar, the one near your college.\
+Which you attend from time to time.\
+Just the thought of her bubbly and witty personality fills you with warmth.
+	[signal arg="despair_decreased"]
+	set {despair} -= 1
+	marinknezevich (smile): She's fine. Still playing cello.
+	ela_knezevich (smile): Oh I wish I could hear it. Too bad there's no internet here to listen to anything...
+	marinknezevich: I've brought you some music. On mp3.
+	ela_knezevich (default): Oh! Hers?
+	marinknezevich: There are other musicians on the playlist as well... but yes, hers too.
+jump ch1_family/friends_done

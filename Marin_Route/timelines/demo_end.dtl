@@ -1,0 +1,14 @@
+[background scene="res://Marin_Route/animations/chapter 2/orange.tscn" fade="5.0"]
+Dear player...\
+This is where the demo ends. I joined the jam a bit too late... and it is my first game after all.\
+Regardless, I hope you had fun.\
+Try going back, making some different choices.\
+Tip\: if you visit Istok and knock three times, instead of leaving, you get a little bonus scene.\
+Anyway... stay tuned for the updates on itch.io.\
+And thank you, all kind people who made Godot tutorials for free...\
+And thank you the Dialogic crew.\
+Yours truly...\
+Mihe
+- Start again?
+	jump intro/
+- Quit

@@ -1,0 +1,93 @@
+[background arg="res://Marin_Route/black2.png" fade="2.0"]
+But are you really sure you want to?\
+Your last meeting was... not a very memorable one.\
+Oh, I mean, it was very memorable. It just did not make for a good memory.\
+A broken friendship is like a dropped glass—\
+sometimes you’re left holding the sharpest pieces.\
+But you've already made up your mind.\
+...He probably isn't home anyways.\
+Or if he is, he still isn't.\
+Ha ha ha.\
+If you get what I mean.
+- Stop badmouthing him.
+	set {likingistok} += 1
+	Oh fine, fine. No need to be so sensitive.\
+As sensitive as he is.\
+You know that he's a Cancer, right?\
+You're a Capricorn. Just in case you were wondering.\
+I don't think that means anything, actually.\
+Just thought you'd like to know.
+- Well...
+	You know that I'm right. There's nobody in that little head of his anymore.
+Anyway.\
+Let me stop yapping. We are almost there.
+[background arg="res://Marin_Route/animations/building.png" fade="2.0"]
+Take a notice of the building in front of you. It's falling apart.\
+Well, it's not 'falling apart'. It's just downsizing one brick at a time.\
+It's not falling apart, it's auditioning for a role in post-apocalyptic movie!\
+Oh I could go on the entire night.
+[music path="res://Marin_Route/sounds/623137__victor_natas__music-for-dark-moments.wav" fade="3.0" volume="0.0"]
+From the third floor, you see red light.\
+You hear music.\
+That's his floor, isn't it?\
+Should we go up, Alumnus?
+- On the other hand...
+	You're right. Let's leave him be.\
+It's best to go home.
+	jump ch1_murder/
+- I said I'd go, didn't I?
+You did.\
+You make your way up the familiar stairs.
+[background arg="res://Marin_Route/black2.png" fade="2.0"]
+Careful...\
+The door you seek stands in front of you.\
+Knock?
+- ...I've changed my mind
+	Getting cold feet? Maybe it's for the better.\
+Go home. There is nothing for you here.
+	jump ch1_murder/
+- Knock
+You knock. And then wait a bit.
+[wait time="1.0" hide_text="false"]
+You wonder if they can even hear you, from all the music.
+[wait time="1.0" hide_text="false"]
+You decide to turn around and leave, but...
+[wait time="2.0"]
+[background scene="res://Marin_Route/animations/chapter 1/andrea.tscn" fade="3.0"]
+andreaivanich (default): Hey?
+marinknezevich (shocked): Oh. Um.
+marinknezevich (default): Hey. I didn't... expect you here.
+andreaivanich (default): I didn't expect you either, Marin... oh, wait, shit, it's holidays, of course you'd be here...
+andreaivanich (tongue): Visiting your folks?
+marinknezevich (default): You could say that.\
+Is...
+Oh, just ask her.
+marinknezevich: Is Istok here?
+andreaivanich (default): Oh, yeah. He's on the couch.\
+...Want me to wake him up?
+marinknezevich (default): Um... no need to...\
+How are you doing?
+andreaivanich (annoyed): Oh you know. Dad cut off my money, again...
+set {walkhome} = "istok"
+You really wonder why. The tracks on her arms are good enough answer.
+marinknezevich: That sucks.
+andreaivanich: Yeah. Fuck him. Old fart. Can't wait for him to kick it.\
+Though he probably wrote me out of his will too.
+andreaivanich (tongue): You sure you don't wanna come in? We still got some powder left over.
+marinknezevich (facepalm): No, thanks... I'll just... get going.
+marinknezevich (smile): As for Istok, tell him...
+- That I stopped by.
+	andreaivanich (tongue): Oh yeah, sure, I will. He's gonna be glad to hear that.\
+I mean, I think.
+- Nothing.
+	andreaivanich (default): Oh, yeah, sure. I probably won't remember this in the morning either, anyways.
+andreaivanich (tongue): So... cya.
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+Before she slams the door, you can see, through a slither, behind her shoulder, the sight of the living room.\
+Syringes on the couch, red light, music that sounds like it came from hell...\
+Dread is poisoning your heart, Alumnus. Keep it steady.
+[music fade="5.0" volume="0.0"]
+[signal arg="despair_increased"]
+set {despair} += 1
+Let's go home. This probably wasn't a good idea.
+jump ch1_murder/

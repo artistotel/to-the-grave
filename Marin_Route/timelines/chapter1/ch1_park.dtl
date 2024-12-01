@@ -1,0 +1,22 @@
+Park... always a good choice.\
+Perfect for when you want fresh air, solitude, and tetanus from a rusty slide.
+set {walkhome} = "park"
+[background scene="res://Marin_Route/animations/chapter 1/park.tscn" fade="2.0"]
+In the distance you can already recognize that godawful iron duck sculpture.\
+It looked creepy even when you were a child. You always hated that cunt.\
+The way the paint peels off it is so unnerving.\
+The floor is littered with syringes.\
+Be careful not to step on them. Aside from tetanus, AIDS is another possibility.\
+The wind is cold.\
+Your home is so much colder than the capital.
+- I know, but...
+	Yet you still want to be here...
+	set {homesick} += 1
+	if {lasttrain} == true:
+		Why wait for the last train then?
+	else:
+		I can see, the way you rushed here.
+- I dream of summer...
+	The summer will come, dear Alumnus.\
+Don't let this wind freeze your heart.
+jump ch1_walk_general/

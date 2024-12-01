@@ -1,0 +1,17 @@
+Hello.\
+This game does not have many rules.\
+In fact, it has only one.\
+Whatever you see this night...\
+...you must keep to yourself.\
+You must take that secret...\
+...to the grave.
+label witness
+Choose your witness\:
+- Marin
+	jump ch1_beginning/
+- Istok
+	Coming soon. Still workin' on it.
+	jump witness
+- Tonka
+	Coming soon. Still workin' on it.
+	jump witness

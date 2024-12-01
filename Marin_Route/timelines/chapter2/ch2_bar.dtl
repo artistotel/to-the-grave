@@ -1,0 +1,69 @@
+[background scene="res://Marin_Route/animations/chapter 2/streets.tscn" fade="3.0"]
+Tell me something, dear Alumnus. \
+I’m listening closely to the echo of your steps... \
+But, forgive me—I’m struggling to decipher what stands behind them.\
+Are they weary, dragging with the weight of every choice that led you back here? \
+Or are they decisive, boldly striding toward something only you can see?\
+Either way...\
+...they carry the unmistakable rhythm of someone who thought they left, but never really did.
+set {2.ch2walk} = "bar"
+marinknezevich (angry): You think you're very funny. Actually, you're just annoying.
+Oh come on. This would be very lonely if I wasn't here.\
+Walking these streets is like visiting an old friend—one you were glad to lose touch with.\
+And it's not like you have many friends, do you?\
+You were always a loner...
+marinknezevich: You don't seem to have that many friends either. You got nobody else to bother but me?
+I like you and your spite. A bit of a bite.\
+As you walk through the streets, you take notice of your surroundings. People are outside. Chatting. Talking.\
+About the murder, of course. What else?\
+In this place even someone wearing a different shirt is a cause for a gossip-fest, let alone a murder.\
+And you are a part of this grand event.
+The bar.
+[background arg="res://Marin_Route/animations/chapter 2/bar.png" fade="3.0"]
+if {walkhome} == "bar":
+	Leona's already gone. She worked the night shift.\
+Too bad. You could use her warmth now.
+lejla_medunjanin: Marin? Oh! Where have you been? When did you come back?
+Lejla Medunjanin. A young waitress. She is a year younger from her, but you remember her from school.\
+She's Istok's cousin, actually. From his mother's side. A girl with her head in clouds.\
+Luckily, less so than he.
+marinknezevich: It seems busy here.
+lejla_medunjanin: Yeah, half the city is here... everyone's talking about you know what...\
+Seriously, who could've done such a thing? Oh my, it's like from a novel...\
+Do you think it was political? Elections are soon, after all.
+Do 14 year old girls really follow elections...? And murder because of them?
+marinknezevich: I don't know. Are there any news? Do they know who did it?
+lejla_medunjanin: Nothing of notice.
+if {inventoryitems.knife} == true:
+	lejla_medunjanin: Stabbed to death... but they didn't find the knife.
+else:
+	lejla_medunjanin: They found the knife, though. Was right next to him.
+	The alternate Marin must be having a much less fun time than you right now.\
+Good that you didn't take it.
+lejla_medunjanin: Do you want anything?
+- A coffee
+- A rakija
+	This early in the morning, haha?\
+Well, suit yourself. Order one for me too.
+lejla_medunjanin: Coming right up. You know, there are also whispers that it has something to do with the orphanage...\
+But I couldn't tell you more. There's lots of police around it right now... but nothing really points to it...
+marinknezevich: How do you even know that?
+lejla_medunjanin: My boyfriend works there.
+marinknezevich: Istok projected it, right?
+lejla_medunjanin: Yes... but I couldn't tell you more... he doesn't speak to me.\
+He doesn't really speak to anyone.\
+I'm really worried. If you see him... can you let him know?
+- Of course
+	set {likingistok} += 1
+	lejla_medunjanin: Thank you. I appreciate it.
+- ...
+	set {likingistok} -= 1
+	lejla_medunjanin: You don't speak either...?\
+That's too bad. You were always together... like twins.
+marinknezevich: I should go now. But thanks for the drink.
+lejla_medunjanin: It's on the house. Anything for our future doctor!\
+By the way, how's Ela?
+if {walkhome} == "longbarvisit":
+	You haven't even seen her yet, except briefly this morning...
+marinknezevich: She's fine. Anyway... enjoy the rest of your day.
+jump ch2_orphanage/

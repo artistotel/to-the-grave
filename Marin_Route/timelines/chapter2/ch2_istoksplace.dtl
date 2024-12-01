@@ -1,0 +1,180 @@
+[background scene="res://Marin_Route/animations/chapter 2/streets.tscn" fade="3.0"]
+Tell me something, dear Alumnus. \
+I’m listening closely to the echo of your steps... \
+But - I can't decipher them.\
+Are they weary, dragging with the weight of every choice that led you back here? \
+Or are they decisive, boldly striding toward something only you can see?\
+Redemption, maybe?\
+Either way...\
+...they carry the unmistakable rhythm of someone who thought they left, but never really did.
+set {2.ch2walk} = "istok"
+marinknezevich (default): Why do you keep bullying me?
+Someone has to. For all your talks of independence, you are tied to this town like a boat to an anchor.\
+The more you complain about it, the more it shapes you.\
+You are awfully familiar with these streets.
+marinknezevich (facepalm): Of course I'm familiar with them. I grew up here.
+Still. Many people live in their towns for years and never really know them as well as you do these.\
+But you seem especially familiar with steps to Istok's building.\
+You used to be such good friends. Then what happened?\
+You went to the college... he went to the academia... and then he changed.\
+But he didn't really change, did he? He was always sensitive.\
+Artists usually are...
+marinknezevich (angry): Where do you turn yourself off? This is becoming grating.
+set {likingistok} += 1
+Oh fine, fine. Still, makes you wonder.\
+Well, let me shut up. We are here.
+[background arg="res://Marin_Route/animations/building.png" fade="3.0"]
+The building looks different in the daylight.\
+You can really see the wear and tear on it.\
+When people pass it, they usually say "they really don't build them anymore the way they used to...\
+...and thank God for that".
+You make your way up.\
+Stairs you know by heart have a way of leading you back to what you were running from.
+if {walkhome} == "istok":
+	But this time you're not letting him ignore you.\
+Oh. You can also offer your sympathies to Andrea, if she's still there.\
+Well she's probably celebrating.
+You knock.\
+...\
+...\
+...
+label knock
+No reply.
+- Knock again
+	set {knock} += 1
+	if {knock} >= 3:
+		jump istok
+	jump knock
+- ...
+	set {notknocking} += 1
+	if {notknocking} == 2:
+		Maybe another time.
+		jump ch2_orphanage/
+	jump knock
+label istok
+...\
+...!\
+You can hear someone get up!
+istok_golubica (default): ...Marin?
+[wait time="1.0"]
+[background scene="res://Marin_Route/animations/chapter 2/istok.tscn" fade="3.0"]
+marinknezevich (angry): Hey.
+marinknezevich (shocked): You look...
+- ...Awful
+- ...Fine
+	set {likingistok} += 1
+He looks rough, mostly. Christ. How does a person even fall so low?
+istok_golubica (default): W-what do you want? A-Andrea is not here, if you're looking for her...
+marinknezevich (default): I was actually looking for you.
+istok_golubica (laugh): Hah. Nobody looks for me these days...
+Unless it's his dealer, who needs to settle the debt, it seems.\
+You can tell, by the tracks on his arm.\
+He's collapsed his veins.\
+He turns around and walks in, motioning for you to follow.\
+The place looks like a mess. Syringes. Little plastic bags. Bottles all over. Ashtray overflowing with cigarettes.
+set {despair} += 1
+[signal arg="despair_increased"]
+The kind of ambiance money just can’t buy—because no one would pay for it.
+istok_golubica (pensive): It's been...
+marinknezevich (default): Three years.
+You still remember it well, your last encounter.\
+You look at the wall. There's a clock on it. It seems to be stuck.
+marinknezevich: How long's that clock been stuck?
+istok_golubica (default): It's stuck?
+Time is relative, which is great, because they’re apparently not on speaking terms.
+- ...
+- I have batteries. Let me fix it for you.
+	set {likingistok} += 1
+	set {guilt} -= 1
+	[signal arg="guilt_decreased"]
+	You quickly whip out two batteries you carry with yourself. It's always good to have batteries.\
+You set the right time. Instead of 4\:13 now it shows 10\:28.
+	istok_golubica (laugh): T-thanks.
+istok_golubica (default): So, um, what can I do for you?
+marinknezevich (default): You know that Matej Ivanich is dead, right?
+istok_golubica: Yeah... Andrea ran off this morning, when she saw the news...\
+...She seemed to be in shock, but, um, not mourning...\
+I heard it was a murder...?
+Look at him closely.\
+He seems to know something.\
+But then again, you know something too.
+marinknezevich: Do you know who did it?
+istok_golubica: W-who? No idea...
+He's lying.
+marinknezevich: Alright. Listen...
+- I know who did it
+	And here I thought we had a rule. Telling it to nobody, means to nobody.\
+But then again... I guess Istok really is a nobody, ha?\
+Haha.\
+Ha.
+	set {likingistok} -= 2
+	set {2.istoksecret} = true
+	istok_golubica (shock): You do?\
+I- I don't know anything, I swear, I had nothing to do with it!
+	istok_golubica (despair): I think... it's time for you to leave.
+	It's surprising, how strong he can be. So skinny and weak-looking...\
+He easily pushes you out of the door.
+- Drop it
+istok_golubica (despair): It's awful... awful what happened.\
+A murder... of... such a man...
+- You had something to do with it. I know.
+	set {likingistok} -= 1
+	istok_golubica (despair): I swear I didn't! Please, I had nothing to do with any of it... nothing...
+- You're right.
+marinknezevich (angry): He was paying for Ela's treatment, Istok.\
+You know Ela? You remember Ela? Considering you don't seem to remember much of anything?
+Good. Get angry, Alumnus... Anger is good. It makes us do things.\
+And seriously, fuck him. Lying to your face...
+set {guilt} -= 1
+[signal arg="guilt_decreased"]
+You did so much for him, during all your years, and how did he repay you?
+if {friend} == "siraj":
+	But then again... he does still bring newspapers to Ela.\
+Don't be too cross with him. She wouldn't appreciate it.\
+Maybe he feels guilty too.\
+No, he does, for sure... it's obvious, in the way he carries himself, in the state of his apartment.
+	marinknezevich (facepalm): Sigh... I know, I know that you still see her sometimes. So why?\
+You're involved somehow... but...
+	set {likingistok} += 1
+istok_golubica (despair): I had nothing to do with any of it... Marin, you have to believe me.\
+Nothing... nothing...
+marinknezevich: Istok?
+istok_golubica: Nothing... I don't know what you think you'll find there, it's just a building, after all...
+marinknezevich (shocked): There?
+istok_golubica: You call it an orphanage, others call it salvation... Me? I just built it...\
+I know nothing, I swear...
+marinknezevich: Istok! Snap out of it!
+if {inventoryitems.orange} == true:
+	The orange! You still have it!\
+I mean, I'm sure an orange cannot heal whatever the hell is wrong with him, but...\
+Give it to him?
+	- Sure
+		set {inventoryitems.orangegiven} = "istok"
+		set {likingistok} += 1
+		The muttering quiets down... though he doesn't touch it.\
+But... you did what you could.\
+Maybe it's time to leave.
+	- Keep it
+		Well, fine. Be a selfish bastard if you want.\
+Wouldn't even help a guy out.
+		set {likingistok} -= 1
+The muttering continues...\
+You don't think he can hear you anymore.\
+Maybe it's time to leave.
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+if {knifewithyou} == true:
+	But before you do, I have a little wicked proposition for you...\
+You still have the knife.\
+Maybe this is a good spot to drop it.
+	- You're fucking awful
+		It's just a suggestion. Hate the game, not the player.
+		set {likingistok} += 2
+	- ...Well...
+		Well? It's just an idea.\
+You choose. I won't look.
+		- Leave it
+			set {2.knifeistok} = true
+			You leave the knife while Istok is not looking.
+		- Keep it
+			Very moral of you.
+jump ch2_orphanage/

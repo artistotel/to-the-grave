@@ -1,0 +1,47 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.910156, 0.859132, 0.316422, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "customtest"
+},
+"default_portrait": "default",
+"description": "",
+"display_name": "Andrea Ivanich",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"annoyed": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/andrea_ivanich/anja_annoying.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"default": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/andrea_ivanich/anja_default.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"tongue": {
+"export_overrides": {
+"image": "\"res://Marin_Route/characters/character_sprites/andrea_ivanich/anja_daring.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

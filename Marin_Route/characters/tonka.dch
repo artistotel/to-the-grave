@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.233582, 0.671875, 0.476697, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "customtest"
+},
+"default_portrait": "default",
+"description": "",
+"display_name": "???",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"default": {
+"export_overrides": {
+"image": "\"res://Marin_Route/animations/chapter 2/tonka_default.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

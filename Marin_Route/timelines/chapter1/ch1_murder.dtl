@@ -1,0 +1,70 @@
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+Home. Where your heart is.\
+Or at least where the most miserable parts of it were formed.\
+Where you keep it in a jar labelled 'childhood trauma'.
+marinknezevich (angry): Shut up. My sister waits for me there.
+Ah, your sister... how could I forget.\
+Your lovely sister, Ela.\
+You better visit her. Make good use of the little time you have together.
+if {lasttrain} == true:
+	And yet you've put that train ride off. So selfish, isn't it?
+else:
+	That's why you've hurried home, isn't it?
+Your feet know the streets well as you walk.\
+The road home is never long, but somehow it always feels endless.\
+Streetlights, however, don't care.\
+Hey. Alumnus.\
+The time has come for me to remind you of our little rule.\
+Whatever you see now, you must keep to yourself.
+[music path="res://Marin_Route/sounds/750620__nancy_sinclair__emotional-dramatic-atmosphere-for-film-and-media.mp3" fade="0.0" volume="0.0" loop="false"]
+In the distance, you see two figures.\
+A smaller looming over a larger one.
+[background scene="res://Marin_Route/animations/chapter 1/murder.tscn" fade="3.0"]
+As you approach, you see the smaller figure...\
+Is holding a knife.\
+The larger one is in a puddle, next to its feet.
+[background scene="res://Marin_Route/animations/chapter 1/headflip1.tscn" fade="0.0"]
+[wait time="1.0"]
+[background scene="res://Marin_Route/animations/chapter 1/headflip2.tscn" fade="0.0"]
+Quick! She's noticed you!
+- Run!
+	Seriously? You're scared of a little girl?\
+So what if she has a knife, you could eat her for breakfast!
+- Approach!
+	You boldly approach...
+[background scene="res://Marin_Route/animations/chapter 1/tonkaleaves.tscn" fade="2.0"]
+But as you do, the girl drops the knife...\
+And disappears into the distance.
+[wait time="2.0"]
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+You come closer and look at the man on the floor.\
+You recognize him.\
+That's Matej Ivanich.
+if {walkhome} == "istok":
+	Andrea's father.
+The town mayor. Murdered, in a puddle of blood.\
+Shock buzzes through your body.\
+You know that man well.\
+He's, after all...\
+...the man who's paid for your college.\
+The man who made your studies possible.\
+Your hands are shaking.
+[signal arg="despair_increased"]
+The girl is already gone. You cannot chase after her.\
+Your phone isn't working. You cannot call the police.\
+And besides, it'd go against our little rule.\
+The knife is on the ground.
+- Pick it up
+	set {inventoryitems.knife} = true
+	For a medicine student, you're really stupid, you know that?\
+Your fingerprints are on it now.\
+You best keep it.
+- Leave it
+	Smart. Wouldn't want to get your fingerprints on it.\
+As expected from someone who almost has his Bachelor's degree.
+You may be wondering... why can't you simply go to the police?\
+Well because that's how games operate. They have rules.\
+And rules exist to keep the chaos entertaining, not prevent it.
+Look at the time. You probably shouldn't linger here for much longer.\
+Don't you have home to go to?
+jump ch1_homefamily/

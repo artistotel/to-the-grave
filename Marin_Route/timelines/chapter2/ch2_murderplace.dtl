@@ -1,0 +1,32 @@
+[background scene="res://Marin_Route/animations/chapter 2/streets.tscn" fade="3.0"]
+Tell me something, dear Alumnus. \
+I’m listening closely to the echo of your steps... \
+But, forgive me—I’m struggling to decipher what stands behind them.\
+Are they weary, dragging with the weight of every choice that led you back here? \
+Or are they decisive, boldly striding toward something only you can see?\
+Either way...\
+...they carry the unmistakable rhythm of someone who thought they left, but never really did.
+set {2.ch2walk} = "murderplace"
+marinknezevich (angry): You must think you're hilarious. Actually, you're just annoying.
+if {guilt} >= 5:
+	The guilt is practically dripping off you—just like your charm.
+elif {despair} >= 5:
+	The despair is practically dripping off you—just like your charm.
+Good to know I'm versatile.\
+You make your way towards the place of the murder. Between the park and the bridge.\
+The police has swarmed the place. The tape separates them from you.\
+You can see Anja there. She looks as if made of stone, not a single tear on her cheek.\
+You can also see her sister, Andrea, standing next to her. They seem to be arguing about something.\
+Eventually, Andrea rushes off, pushing past you.
+marinknezevich: What was that about?
+anja_ivanich: Oh don't mind her. She's just being annoying. I haven't seen her in weeks. And now she comes to argue...
+anja_ivanich (ugh): She didn't take this well.\
+Anamarija will be coming soon too, for the funeral...
+She is a couple years older than you. You don't know the eldest Ivanich sister that well.
+anja_ivanich (ugh): And they are sending an inspector from the capital too... not good.
+Definitely not good.
+anja_ivanich (def): You know, Anamarija was already preparing papers to adopt a child from the orphanage... my father is the director. She just needed his signature. It's a mess...
+marinknezevich: ...My condolonces.
+anja_ivanich: It will all be fine... he has a deputy, Momchilo, who will take over everything for now.\
+Anyway, don't linger for too much here. Go home. We might have more questions as the investigation progresses.
+jump ch2_orphanage/

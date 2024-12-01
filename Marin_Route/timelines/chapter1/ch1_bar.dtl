@@ -1,0 +1,96 @@
+Well, do you have any idea where you could even go to?\
+You could always go to the bar.\
+It might not have answers, but it has enough liquor to make you stop asking.
+- Hm...
+	I'm not removing that little guilt meter. You've already thought about it.\
+But you can go home if you want to.
+	- Go home
+		jump ch1_family/
+	- The bar
+- The bar. I've decided.
+Well I respect your decision. Not you, though, but the decision indeed.\
+But I also understand. Murder is never easy to witness.\
+Matej Ivanich paid for your college. For your opportunity to escape.\
+Maybe even find your sister's cure. That's why you chose medicine, isn't it?\
+No dice so far, but never stop hoping.
+You walk the streets. You know very well where the bar is...\
+...considering there is, like, one.\
+Its name is "Srechko's". Means "Lucky's".\
+However, everyone calls it "The Bitter End". Because that's where people  mostly end up at the end of the night.\
+Or the end of the nightshift. Or you meet your end there. Plenty of reasons for it.
+[background scene="res://Marin_Route/animations/chapter 1/bar.tscn" fade="2.0"]
+You open the door. Smoke of cigarettes and scent of rakija greets you.
+leonaarnaut: Marin? You're back? Oh come on, sit, sit...
+That's Leona Arnaut\: part therapist, part referee, and full-time saint with a liquor license.\
+She could write a novel with everything she’s heard, but she’d rather just pour another drink.
+leonaarnaut: Tell me, how's the life in the capital?
+marinknezevich (default): Oh, you know... it's fine. As fine as it gets.
+leonaarnaut (ann): Your suitcase is with you. Don't tell me you've stopped here before going home...?\
+Marin, do I need to get a broom and chase you out?
+marinknezevich: Just let me have a drink in peace.
+set {walkhome} = "bar"
+Your hands are shaking, dear Alumnus.
+leonaarnaut: Fine... but just one, I'm not letting you have more.\
+I know things are hard, but you can't avoid them forever...
+mirsad: Marin!
+leonaarnaut (def): Go away, Mirsad... don't you see I'm talking to the Bachelor?
+marinknezevich: I'm not a Bachelor yet...
+mirsad: Well no offense, but with how poor you are, you really aren't.
+leonaarnaut (def): We are talking about the degree, moron.\
+Marin, come on... something's wrong. What is it?
+Nobody knows yet. And nobody will probably see the body until the early morning.\
+How do you tell someone that you've seen murder?\
+I know, you are a doctor, you've dissected bodies before... but this is different.
+leonaarnaut (ann): Marin... If the bottle could fix things, I’d be out of a job.\
+Come on. Something's happened, and you won't tell me what...\
+You shouldn't be here.\
+Just go home. Your folks are waiting.
+- ...Well
+	There is something so warm about her. The way she always knows how to say the right thing.
+	set {despair} -= 1
+	[signal arg="despair_decreased"]
+	marinknezevich: You're a gem, Leona. Out of all Vigor, you're a Smirnoff.
+	leonaarnaut: Thanks, love.
+	set {walkhome} = "shortbarvisit"
+	She moves the drink away.
+	jump ch1_family/
+- Just... pour me a drink.
+	set {walkhome} = "longbarvisit"
+leonaarnaut (def): Sigh... what is it, really? Did your girlfriend leave you? Do you even have a girlfriend?
+mirsad: Him? Looks aren't everything. I've seen girls approach him, he just stands there like a wooden sculpture... Brooding and shit.
+leonaarnaut: Leave him alone. Is it your father?
+marinknezevich: Hah.
+leonaarnaut: I know, but, still... Rakija numbs the sting, but it doesn’t heal the wound.
+mirsad: Depends on who you ask. My grandma would disagree...
+leonaarnaut: Absolutely nobody cares.\
+Marin, don't do this to yourself. I see Istok every single day. That boy's fallen through.
+mirsad: And we all thought he'd be a huge talent... renovate the city and stuff...
+set {friend} = "mirsad"
+marinknezevich: How's he doing?
+leonaarnaut: He looks more into the glass than at the world around himself. Well, he was always a bit weird, sensitive, but...
+if {walkhome} == "istok":
+	marinknezevich: I went to visit him. He didn't even... get up to say hi to me.
+	mirsad: Don't take it personally. He probably couldn't. He's on the floor more than on his feet.
+leonaarnaut: It all started when he finished projecting that orphanage... don't get me wrong, it's nice that kids have somewhere to be, but I think all those rules, expectations, stuff like that destroyed him.
+mirsad: Well he was never that stable anyways. He's like a straw house, a bit of wind was enough to knock him down...
+leonaarnaut: I see enough of artists. They all always realize that their career choice was shit.\
+That clients won't just let them do whatever they want.
+marinknezevich: Still, seems a bit extreme...\
+Give me another drink.
+leonaarnaut: Sigh. Well, fine... but this isn't the place where you should be, Marin.\
+I see Ela sometimes, she is going out less and less though. Seems like it's all getting worse...
+[signal arg="guilt_increased"]
+set {guilt} += 1
+leonaarnaut: But I won't bring your spirits down. I don't think they can go lower than they already are.\
+Just remember... Bakšiš nije grad u Turskoj...
+marinknezevich: I'll make sure. Haha.
+You take a drink. Then one more. Then another. The night flows idly.\
+You almost forgot about the murder.
+if {inventoryitems.knife} == true:
+	About the knife in your pocket.
+[background arg="res://Marin_Route/black2.png" fade="2.0"]
+It's time to go home, Alumnus. The sun will almost set...\
+You can see the night's cover get lighter and lighter.\
+The sunrise here doesn’t so much rise as it reluctantly clocks in for another thankless shift.\
+You make your way home.
+jump ch1_home_late/

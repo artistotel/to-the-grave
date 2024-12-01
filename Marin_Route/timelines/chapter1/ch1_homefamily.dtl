@@ -1,0 +1,35 @@
+[background arg="res://Marin_Route/black2.png" fade="2.0"]
+Where else could you go after this, anyways?\
+What places could you possibly want to visit?
+if {walkhome} == "istok":
+	You've already been to Istok's, and I don't remember you finding anything fun there.
+else:
+	Istok. Of course, Istok...
+Well, feel free to wander. I won't stop you.\
+But your sister waits at home, dear Alumnus... and she doesn't have much time left.
+set {guilt} += 1
+[signal arg="guilt_increased"]
+[signal arg="guilt_increased"]
+Oh, look. Another bar. That's your guilt bar.\
+You know the rules. If it fills up, the game ends.\
+But don't worry, I don't plan to punish you for the choices you didn't make.\
+Want to go somewhere else?
+- ...I'll go home. Ela waits
+	set {guilt} -= 1
+	[signal arg="guilt_decreased"]
+	There. Let's decrease that. And let's go visit your sister, at last.
+	jump ch1_family/
+- Yes.
+	if {walkhome} == "istok":
+		Where to? Istok's again? He didn't want to greet you even when you were there.\
+And what about Andrea? Her father has been murdered.
+		set {guilt} += 1
+		[signal arg="guilt_increased"]
+		set {despair} += 1
+		[signal arg="despair_increased"]
+	else:
+		Maybe a good drink will clear your head, after all.
+		set {guilt} += 1
+		[signal arg="guilt_increased"]
+		Maybe it won't.
+jump ch1_bar/

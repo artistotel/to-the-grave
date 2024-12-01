@@ -1,0 +1,28 @@
+You let yourself into the house, stumbling, barely holding on your feet.\
+You hoped your parents would be asleep, but just your luck...\
+You can see them at the table.\
+Your father with a bottle. Your mother with eyes full of despair...\
+Don't worry. I've punished you enough. If that little meter was to be updated every time you came home, the game would be over in a day.
+marinknezevich (shocked): Um... what are you still doing up?
+marija_knezevich: Marin...! We've been worried- we waited for you...
+bepo_knezevich: Hah. No wonder. I can smell the booze and smoke on you, son, if I can even call you that...\
+Is that what you've been spending your money on in the capital?\
+Whores and alcohol? While your sister is dying?
+marinknezevich (angry): Hey-!!!
+if {lasttrain} == false:
+	And you've hurried on that train. Why, I wonder.\
+I'm going to be honest, this place kinda sucks.
+else:
+	Well, is he wrong? I mean, I don't know about the bars, but you for sure took your time...\
+There were trains leaving much sooner than the one you took, you know?
+marinknezevich: Shut up!
+bepo_knezevich: Telling off your father now, are we?
+marinknezevich (shocked): No- I didn't mean you...
+marija_knezevich: Sine...
+marinknezevich (facepalm): Whatever... is Ela still up?
+bepo_knezevich: At this hour? Hah. Do you even know what time it is?
+marija_knezevich: She went to sleep. Please... go to bed, Marin. Don't cause a scene now...
+Oh she seems so disappointed.\
+After a bit more bickering, you make your way towards your room.\
+It's so cold.
+jump ch2_dream/

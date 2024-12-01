@@ -1,0 +1,89 @@
+Home is where the heart is...\
+...assuming the heart survived living there.\
+You make your way to it... the streets know you well. As well as you know them.\
+Now steady your heart, Alumnus.\
+And knock.
+[background scene="res://Marin_Route/animations/chapter 1/fam.tscn" fade="3.0"]
+You open the door to a familiar sight.\
+Your father with a bottle of wine. Your mother with despair in her eyes.
+[signal arg="despair_increased"]
+set {despair} += 1
+marija_knezevich: ...\
+...\
+...!\
+Marin!
+Your beloved mother.
+bepo_knezevich: Sin Razmetni comes back home...
+Even more beloved father.
+marinknezevich (angry): How am I "Sin Razmetni" if I'm the one sending money home?!
+marija_knezevich: Please, don't argue... please, I'm just happy to see you, my son, my only son...
+bepo_knezevich: How's the capital life been? Good? Bars, whores, girls?
+marija_knezevich: Bepo!
+bepo_knezevich: What? It's true. I could've gotten you a job here, instead of...
+marija_knezevich: Leave him be!\
+Marin, please, sit, there is still food, it's still warm...
+if {walkhome} == "shortbarvisit":
+	bepo_knezevich: I can smell the cigarettes and booze on you. Stopped to a bar before this?
+	marinknezevich: I think they know you there better than they do me...
+	marija_knezevich: Please...! Don't do this now Bepo...
+marinknezevich (default): I'm not hungry. Where's Ela?
+marija_knezevich: She just went to bed. She's fragile, you know.\
+...But I'm sure she could get up to see you.
+You make your way to her room and knock.\
+...\
+...\
+...
+ela_knezevich (shocked): Marin?!
+[background scene="res://Marin_Route/animations/chapter 1/ela.tscn" fade="3.0"]
+ela_knezevich (smile): Brother, you're here!
+She immediately wraps her arms around you.\
+Awww. So cute.
+if {lasttrain} == true:
+	set {guilt} += 1
+	[signal arg="guilt_increased"]
+	And to think you waited for the last train.
+ela_knezevich: I waited for you... oh, brother, quick, come in, you have to tell me everything. How's life in the capital?
+- ...It's good
+	if {lasttrain} == false:
+		Why are you lying to her? You rushed on that train like your life depended on it.\
+But keep on lying. After all, we don't always lie for nefarious purposes.
+	else:
+		Oh it for sure is. If only that train had gotten stuck in snow.
+	ela_knezevich: I'm glad! That's good!
+- ...Could be better
+	if {lasttrain} == true:
+		Oh come on. I know you like it there.\
+Bars, girls, opportunities...\
+And no reminders of imminent death.\
+Don't lie to her.
+	ela_knezevich (default): Oh come on. Don't tell me you miss this place... there isn't much to miss!
+ela_knezevich (default): You know that I have to experience college through you... you know that I can't go anywhere.\
+So keep a smile on for me, brother...
+marinknezevich (smile): I'll try.
+ela_knezevich (default): Tell me more. How are your friends doing?
+Tell her about...
+if {lasttrain} == true:
+	jump friends_last_train/
+else:
+	jump friends_first_train/
+label friends_done
+ela_knezevich (default): I'm just glad there is someone to take care of you, when I'm...
+ela_knezevich (pensive): ...while I'm not in the capital.
+When 'I'm dead', she meant, dear Alumnus. When I'm dead.
+- Ela...
+Shhh. Don't call her out. Allow her this little comforting lie she has.\
+She knows she's been getting worse. She doesn't want you to see it.\
+We all lie, after all.
+ela_knezevich (pensive): I should... go to bed. I feel tired.
+ela_knezevich (default): But I'll see you in the morning, okay?
+marinknezevich (smile): I'll let you sleep.
+You tuck her in and wait until her breathing evens out.\
+Oh, I remember you, Marin. How you used to camp in front of her door...\
+Listening through the night for signs of life, of breathing...
+marinknezevich (angry): Shut up.
+[background arg="res://Marin_Route/black2.png" fade="5.0"]
+Don't shush me. I am not here to make fun of your misery...\
+...just to make it a bit more poetic.\
+It's time to go to sleep. Tomorrow is a big day, after all.\
+The day when the body will get discovered.
+jump ch2_dream/

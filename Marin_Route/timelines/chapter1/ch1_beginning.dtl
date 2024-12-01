@@ -1,0 +1,64 @@
+[background scene="res://Marin_Route/animations/chapter 1/train.tscn" fade="2.0"]
+[music path="res://Marin_Route/sounds/127011__timkahn__2011-08-20-night-trai.mp3" fade="2.0" volume="-10.0"]
+The sound of train wheels rings in your ears. Like being repeatedly beaten by a bat.\
+And then that annoying whistling sound. Choo-chooo. The sound that trains make.\
+Your name is Marin Knezevich.\
+You are a medicine student. Third year.  That Bachelor's degree seems closer and closer, doesn't it.\
+You study in the capital, but - for better or for worse - the holidays are coming up.\
+It's time, my dear Alumnus, to make a trip home.\
+That's why you're on the train, after all. Going back to your hometown.\
+Hometown. The only place where you can stand still...\
+...and still feel like you're moving backwards.\
+Ha ha ha.\
+Okay, be honest with me. You can tell me. I won't tell anyone.\
+Was this the last train leaving?
+- Yes.
+	set {lasttrain} = true
+	So you've put it off. Looked at that timetable, waited for the last one...\
+Thought a bit about not boarding the train at all, eh? Ha. Ha. Ha.\
+Smart. \
+After all, the only thing harder than leaving your hometown \
+is convincing yourself it’s worth coming back.
+- No.
+	No? Wait, what was it. Like, the sooner you go, the sooner you'll get it over with? Or?\
+Oh, wait, I get it. You actually... oh don't tell me you miss that old place.\
+Mr. Hometown Boy. Ha ha ha.\
+That’s sweet. \
+It’s like Stockholm Syndrome... \
+...but with better parking.
+Your phone is absolutely useless there, by the way.\
+The Friday night entertainment still boils down to watching the one and only stoplight in the town change colours.\
+So, better just shut it off and put it in your pocket. You don't want to lose it.\
+Ah.\
+Finally. That sound is over. That rhythmical clackering and batting. Hallelujah.
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+You get off the train.\
+I know. Your eyes even now, three years later, so full of hope, look if there is anyone standing with your name, waiting to carry your suitcases.
+[music fade="5.0" volume="0.0"]
+In vain you look, my dear Alumnus. Nobody is there.\
+Only the conducter, blowing his whistle - urging passengers to turn off their cigarettes and come back inside.\
+There are more stops on their route, after all. The only reason why people get off on this one is because of a smoke break. \
+See? \
+At least ten of you got off it... \
+...and you are the only one who didn't go back inside.
+[background scene="res://Marin_Route/animations/chapter 1/beggar.tscn" fade="2.0"]
+Next to your feet, you see a little beggar girl, her leg missing.\
+A sense of dread and despair takes over you.
+set {despair} += 1
+[signal arg="despair_increased"]
+[signal arg="despair_increased"]
+Oh and speaking of despair, would you look at that? What's that little red thing there?\
+Well that's your despair meter. Once it fills up, the game ends.\
+And there are a lot of things in this town that can cause despair. Less so that can relieve it.\
+Okay, so, just keep an eye on it.
+if {lasttrain} == false:
+	Aren't you so overjoyed you rushed on that train.
+[music fade="3.0" volume="0.0"]
+[background arg="res://Marin_Route/black2.png" fade="2.0"]
+Anyway, time to go home. From the train station you have two options.\
+Either going through the park or over the river bridge.\
+Where to?
+- Park
+	jump ch1_park/
+- Bridge
+	jump ch1_bridge/

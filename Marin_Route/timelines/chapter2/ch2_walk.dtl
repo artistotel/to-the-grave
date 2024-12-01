@@ -1,0 +1,51 @@
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+The doors close behind you with not even a creak, but a sigh.
+[music path="res://Marin_Route/sounds/703472__universfield__a-black-dawn.mp3" fade="5.0" volume="0.0"]
+[background scene="res://Marin_Route/animations/chapter 2/orange.tscn" fade="3.0"]
+In front of your house stands the orange tree, defiant in its mediocrity. Its branches stretch awkwardly, as if reaching for greatness but settling for "good enough."\
+It grows a single fruit, lopsided and dimpled, clinging to the branch like it knows it’s the last hope for something meaningful.\
+Pick it? Or leave it there, a sad metaphor waiting for its next victim?
+- Take it
+	set {inventoryitems.orange} = true
+	set {despair} -= 1
+	[signal arg="despair_decreased"]
+	It really blooms so nicely. It's sad, though. That there is only single one.\
+But congratulations, you have a single orange now.\
+Maybe you can use it to bribe someone. Ha ha ha!\
+Or just keep it for now.
+- Leave it
+	set {guilt} -= 1
+	[signal arg="guilt_decreased"]
+	Yeah. Leave it for the animals. Bugs. Birds.\
+Finches.\
+Ferrets.
+What should we do now?
+[background arg="res://Marin_Route/black2.png" fade="3.0"]
+marinknezevich (default): Find the girl, of course.
+Sure. She could be anywhere. Maybe she isn't even from this town.\
+We can ask around. You still have some time before the funeral.
+if {knifewithyou} == true:
+	And you still have that knife in your pocket.
+elif {knifeelasroom} == true:
+	At least you got rid of the knife. Bad news, it's still in Ela's room.\
+Let's just hope she doesn't find it.
+Where to, chief?
+- The place of the murder
+	Are you sure...? The place must be crawling with police.
+	marinknezevich: Maybe. But maybe there are some clues.
+	jump ch2_murderplace/
+- The bar
+	if {walkhome} == "bar":
+		Yeah, but you've already been there. Nothing good came out of it.
+		marinknezevich: Someone could know something.
+		jump ch2_bar/
+- ...
+	Oh, you have another idea?
+	- ...Istok's place
+		if {walkhome} == "istok":
+			Really...? But you've been there already. And it wasn't that fun.
+		else:
+			Hm. Why him?
+		marinknezevich (default): I feel... like he has something to do with it.
+		Well. Doesn't hurt to pay him a visit, sure...
+		jump ch2_istoksplace/
